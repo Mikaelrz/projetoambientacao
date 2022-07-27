@@ -21,11 +21,15 @@ function validar(){
     }else if(senha === ''){
         alert("senha obrigatória");
         return false;
-    }else{
-        return true;
+    }else
+        if(login != "senai"){
+            alert("login inválido");
+            return false;
+        }else if(senha != 123){
+            alert("senha inválida");
+            return false;
+        }else{           
+            window.sessionStorage.setItem('login',login);
+            return true;            
+        }
     }
-
-
-
-}
-
